@@ -103,13 +103,18 @@
               <span class="brand-banner__eyebrow">А также</span>
               <h3 class="brand-banner__title">призы от брендов:</h3>
               <div class="brand-banner__grid">
-                <article
-                  v-for="brand in brandLogos"
-                  :key="brand.id"
+                <div
+                  v-for="(logo, index) in brandLogos"
+                  :key="index"
                   class="brand-logo-card"
                 >
-                  <img :src="brand.src" :alt="brand.name" loading="lazy" />
-                </article>
+                  <img
+                    :src="logo"
+                    :alt="`Логотип партнёра ${index + 1}`"
+                    class="brand-logo-card__image"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </section>
           </div>
@@ -350,23 +355,14 @@ const prizeCards: PrizeCard[] = [
 ];
 
 const brandLogos = [
-  { id: 'burger-king', name: 'Burger King', src: assetUrl('brands/burger-king.svg') },
-  { id: 'kfc', name: 'KFC', src: assetUrl('brands/kfc.svg') },
-  { id: 'vkusno', name: 'Вкусно и точка', src: assetUrl('brands/vkusno.svg') },
-  { id: 'tele2', name: 'Tele2', src: assetUrl('brands/tele2.svg') },
-  { id: 'vkusvill', name: 'ВкусВилл', src: assetUrl('brands/vkusvill.svg') },
-  { id: 'yalta-craft', name: 'Yalta Craft', src: assetUrl('brands/yalta-craft.svg') },
-  { id: 'yandex-plus', name: 'Яндекс Плюс', src: assetUrl('brands/yandex-plus.svg') },
-  { id: 'cheesecake', name: 'Cheesecake', src: assetUrl('brands/cheesecake.svg') },
-  { id: 'coffeemachine', name: 'Coffee Machine', src: assetUrl('brands/coffeemachine.svg') },
-  { id: 'coffeemachine-dark', name: 'Coffee Machine Dark', src: assetUrl('brands/coffeemachine-dark.svg') },
-  { id: 'diksi', name: 'Дикси', src: assetUrl('brands/diksi.svg') },
-  { id: 'maria', name: 'Мария', src: assetUrl('brands/maria.svg') },
-  { id: 'perekrestok', name: 'Перекрёсток', src: assetUrl('brands/perekrestok.svg') },
-  { id: 'samari', name: 'Samari', src: assetUrl('brands/samari.svg') },
-  { id: 'shokoladnica', name: 'Шоколадница', src: assetUrl('brands/shokoladnica.svg') },
-  { id: 'shashlykoff', name: 'Shashlykoff', src: assetUrl('brands/shashlykoff.svg') },
-  { id: 'stolovaya', name: 'Столовая №1', src: assetUrl('brands/stolovaya.svg') },
+  assetUrl('brands/row1_01.png'),
+  assetUrl('brands/row2_01.png'),
+  assetUrl('brands/row2_02.png'),
+  assetUrl('brands/row2_03.png'),
+  assetUrl('brands/row2_04.png'),
+  assetUrl('brands/row2_05.png'),
+  assetUrl('brands/row2_06.png'),
+  assetUrl('brands/row3_01.png'),
 ];
 
 const headerIcons = {
@@ -987,27 +983,27 @@ const formatMultiline = (value: string) => value.replace(/\n/g, '<br />');
 
 .brand-banner__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
   margin-top: 12px;
 }
 
 .brand-logo-card {
-  border-radius: 16px;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 14px;
+  padding: 12px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 68px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 66px;
+}
 
-  img {
-    max-width: 100%;
-    max-height: 44px;
-    object-fit: contain;
-    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.3));
-  }
+.brand-logo-card__image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .tabbar {
