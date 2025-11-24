@@ -1,0 +1,30 @@
+<svg width="800" height="1200" viewBox="0 0 800 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Space themed background">
+  <defs>
+    <radialGradient id="stars" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#1e3d76" />
+      <stop offset="70%" stop-color="#0c1a37" />
+      <stop offset="100%" stop-color="#081022" />
+    </radialGradient>
+    <radialGradient id="planet" cx="30%" cy="40%" r="25%">
+      <stop offset="0%" stop-color="#4ed2ff" stop-opacity="0.9" />
+      <stop offset="80%" stop-color="#142b52" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#081022" stop-opacity="0.2" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#stars)" />
+  <circle cx="220" cy="310" r="220" fill="url(#planet)" />
+  <circle cx="540" cy="180" r="110" fill="#203969" opacity="0.6" />
+  <circle cx="620" cy="220" r="140" fill="#102344" opacity="0.5" />
+  <g fill="#83d5ff" opacity="0.8">
+    <circle cx="160" cy="140" r="3" />
+    <circle cx="90" cy="300" r="2" />
+    <circle cx="650" cy="260" r="3" />
+    <circle cx="520" cy="90" r="2" />
+    <circle cx="400" cy="420" r="2" />
+    <circle cx="730" cy="130" r="2" />
+  </g>
+  <path d="M420 90c12 18 32 40 60 46" stroke="#f1c40f" stroke-width="6" stroke-linecap="round" fill="none" />
+  <path d="M480 150c35 10 63 1 90-18" stroke="#f1c40f" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.8" />
+  <path d="M480 120c32 12 54 8 82-7" stroke="#f1c40f" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6" />
+  <circle cx="520" cy="95" r="10" fill="#f1c40f" />
+</svg>

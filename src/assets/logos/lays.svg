@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="80" viewBox="0 0 120 80" role="img" aria-label="Lay's logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffef9a" />
+      <stop offset="100%" stop-color="#f0c400" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="80" rx="32" fill="url(#bg)" stroke="#e4a600" stroke-width="3" />
+  <text x="50%" y="54%" text-anchor="middle" font-family="'Trebuchet MS', Arial, sans-serif" font-size="32" font-weight="700" fill="#e11d2e">Lay's</text>
+</svg>
